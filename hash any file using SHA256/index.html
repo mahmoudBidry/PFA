@@ -2,14 +2,30 @@
 <html>
 <head>
   <title>PDF Hash Calculator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 </head>
 <body>
   <input type="file" id="pdfInput">
   <button onclick="calculateHash()">Calculate Hash</button>
-  <br>
   <p id="hashResult"></p>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+  <br>
+  <br>
+  <button id="connectButton" onclick="connectWallet()">Connect to MetaMask</button>
+  <br>
+  <br>
+  <button onclick="addPDFToBlockchain()">Add PDF to Blockchain</button>
+  <br>
+  <br>
+  <button onclick="verifyPDF()">Verify PDF</button>
+  <br>
+  <br>
+  <button onclick="deletePDF()">Delete PDF</button>
+
+
+  <!-- <button onclick="testContract()">testContract</button> -->
+  <br>
   <script src="script.js"></script>
 </body>
 </html>
